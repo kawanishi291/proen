@@ -1,10 +1,14 @@
 <?php
+    // <title></title>に表示する変数
     $title = "カレンダー";
+    // ヘッダー部分をimport
     require('./header.php');
+    // どのページか判定する変数
     $page = "calendar";
 ?>
 <div id='calendar-box'></div>
 <?php
+    // フッター部分をimport
     require('./footer.php');
 ?>
 <script>
@@ -14,11 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
         initialView: 'dayGridMonth',
         events: [
 <?php
+// DB接続処理include
 include "./pdo_connect.php";
+// SQL文
 $sql = "SELECT * FROM score JOIN music WHERE score.id = music.id";
 $stmt = $pdo -> query($sql);
 foreach($stmt as $row){
 ?>
+                // カレンダー表示設定
                 {
                     id: '<?=$row['num']?>',
                     title: '<?=$row['name']." ".(($row['score'] / $row['max']) * 100)."%"?>',
