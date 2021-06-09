@@ -15,6 +15,7 @@
             <th>GREAT</th>
             <th>GOOD</th>
             <th>BAD</th>
+            <th>COMBO</th>
             <th>%</th>
         </thead>
 <?php
@@ -33,6 +34,7 @@
             <td><?=$row['great']?></td>
             <td><?=$row['good']?></td>
             <td><?=$row['bad']?></td>
+            <td><?=$row['combo']?></td>
             <td><?=($row['score'] / $row['max']) * 100?></td>
         </tbody>
 <?php
