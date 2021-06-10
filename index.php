@@ -35,7 +35,7 @@
             <td><?=$row['good']?></td>
             <td><?=$row['bad']?></td>
             <td><?=$row['combo']?></td>
-            <td><?=($row['score'] / $row['max']) * 100?></td>
+            <td><?=round(($row['score'] / $row['max']) * 100)?></td>
         </tbody>
 <?php
     }
