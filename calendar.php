@@ -28,7 +28,7 @@ foreach($stmt as $row){
                 // カレンダー表示設定
                 {
                     id: '<?=$row['num']?>',
-                    title: '<?=$row['name']." ".(round(($row['score'] / $row['max']) * 100))."%"?>',
+                    title: '<?=$row['name']." ".round(($row['score'] / $row['max']) * 100)."%"?>',
                     start: '<?=date('Y-m-d',strtotime($row['datetime']))?>',
                     url: './index.php#<?=$row['num']?>'
                 },
