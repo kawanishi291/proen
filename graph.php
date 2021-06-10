@@ -37,10 +37,10 @@
         for ($i = $cnt; $i < 7; $i++) {
             if ($datetime_list[$i]." 00:00:00" <= $row['datetime'] && $row['datetime'] <= $datetime_list[$i]." 99:99:99") {
                 if ($max_list[$cnt] < ($row['score'] / $row['max']) * 100) {
-                    $max_list[$cnt] = ($row['score'] / $row['max']) * 100;
+                    $max_list[$cnt] = round(($row['score'] / $row['max']) * 100);
                 }
                 if ($min_list[$cnt] > ($row['score'] / $row['max']) * 100) {
-                    $min_list[$cnt] = ($row['score'] / $row['max']) * 100;
+                    $min_list[$cnt] = round(($row['score'] / $row['max']) * 100);
                 }
                 break;
             } else {
